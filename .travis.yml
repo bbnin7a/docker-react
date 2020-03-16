@@ -6,4 +6,4 @@ before_install:
   - docker build -t bbnin7a/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run bbnin7a/docker-react CI=true npm run test -- --coverage
+  - docker run -e CI=true bbnin7a/docker-react npm run test -- --coverage
